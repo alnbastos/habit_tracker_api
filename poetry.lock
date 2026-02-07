@@ -694,7 +694,6 @@ description = "Simple module to parse ISO 8601 dates"
 optional = false
 python-versions = ">=3.7,<4.0"
 groups = ["main"]
-markers = "python_version < \"4.0\""
 files = [
     {file = "iso8601-2.1.0-py3-none-any.whl", hash = "sha256:aac4145c4dcb66ad8b648a02830f5e2ff6c24af20f4f482689be402db2429242"},
     {file = "iso8601-2.1.0.tar.gz", hash = "sha256:6b1d3829ee8921c4301998c909f7829fa9ed3cbdac0d3b16af2d743aed1ba8df"},
@@ -2021,5 +2020,5 @@ files = [
 
 [metadata]
 lock-version = "2.1"
-python-versions = ">=3.12"
-content-hash = "c6c926dcaf7ba747347f09f29ff6e50e51e72cec292a20bcd2c41cec714a7e6e"
+python-versions = ">=3.12,<4.0"
+content-hash = "2a0234362ec6a5ae75fe971fb85b9c1c49d51a58a1c95af6076b1466d9f76e32"
