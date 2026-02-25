@@ -41,9 +41,20 @@ class HabitService:
         return habit
 
     async def delete(self, habit_id: int):
-        deleted_count = await Habit.filter(id=habit_id).delete()
+        habit = await Habit.filter(id=habit_id).delete()
 
-        if deleted_count == 0:
+        if habit == 0:
             raise NotFoundError("Habit")
 
         return {"detail": "Habit successfully deleted."}
+
+    async def toggle_archive(self, habit_id: int):
+        habit = await Habit.get_or_none(id=habit_id)
+
+        if not habit:
+            raise NotFoundError("Habit")
+
+        habit.is_archived = not habit.is_archived
+        await habit.save(update_fields=["is_archived"])
+
+        return habit

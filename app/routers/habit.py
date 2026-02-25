@@ -55,3 +55,13 @@ async def update(habit_id: int, habit_in: HabitIn):
 )
 async def delete(habit_id: int):
     return await service.delete(habit_id)
+
+
+@router.patch(
+    "/{habit_id}/archive",
+    summary="Arquivar/desarquivar hábito",
+    status_code=status.HTTP_200_OK,
+    response_model=HabitOut,
+)
+async def archive(habit_id: int):
+    return await service.toggle_archive(habit_id)
