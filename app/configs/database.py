@@ -18,6 +18,8 @@ async def lifespan(app: FastAPI):
     await Tortoise.init(
         db_url=settings.database_url,
         modules={"models": ["app.models"]},
+        timezone="UTC",
+        use_tz=True,
     )
 
     yield

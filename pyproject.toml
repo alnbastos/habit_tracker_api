@@ -11,7 +11,10 @@ dependencies = [
     "fastapi[standard] (>=0.128.4,<0.129.0)",
     "tortoise-orm[asyncpg] (>=0.25.4,<0.26.0)",
     "aerich[toml] (>=0.9.2,<0.10.0)",
-    "uvicorn (>=0.40.0,<0.41.0)"
+    "uvicorn (>=0.40.0,<0.41.0)",
+    "httpx (>=0.28.1,<0.29.0)",
+    "pytest (>=9.0.2,<10.0.0)",
+    "polyfactory (>=3.3.0,<4.0.0)",
 ]
 
 [tool.poetry]
@@ -25,3 +28,8 @@ isort = "^7.0.0"
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.aerich]
+tortoise_orm = "app.configs.database.TORTOISE_ORM"
+location = "./migrations"
+src_folder = "./."

@@ -6,7 +6,8 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     gcc \
     libpq-dev \
- && rm -rf /var/lib/apt/lists/*
+    postgresql-client \
+    && rm -rf /var/lib/apt/lists/*
 
 # Dependências Python
 COPY pyproject.toml poetry.lock* /app/
