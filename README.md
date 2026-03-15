@@ -16,3 +16,8 @@ API RESTful para rastrear hábitos pessoais, permitindo que usuários:
 - **Migrações**: Aerich
 - **Conteinerização**: Docker
 - **Linters/Formatters/Tasks**: Black, Isort, Taskipy
+
+
+### Versões
+- **Python**: 3.12.13
+- **Poetry**: 2.3.2
