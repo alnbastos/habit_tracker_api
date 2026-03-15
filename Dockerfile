@@ -19,7 +19,4 @@ RUN pip install --upgrade pip \
 # Código da aplicação
 COPY . /app
 
-# Permissão pro entrypoint
-RUN chmod +x /app/entrypoint.sh
-
 EXPOSE 8000
