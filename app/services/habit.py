@@ -1,6 +1,6 @@
 from tortoise.exceptions import DoesNotExist
 
-from app.exceptions import NotFoundError
+from app.exceptions.base import NotFoundError
 from app.models.habit import Habit
 from app.schemas.habit import HabitIn, HabitOut
 
