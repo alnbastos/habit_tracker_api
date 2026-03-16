@@ -1,7 +1,7 @@
 from fastapi import APIRouter, status
 
-from app.services.habit import HabitService
 from app.schemas.habit import HabitIn, HabitOut
+from app.services.habit import HabitService
 
 router = APIRouter(prefix="/habits", tags=["Habits"])
 service = HabitService()
@@ -29,8 +29,7 @@ async def details(habit_id: int):
 
 @router.post(
     "/",
-    summary="Criar um novo hábito com nome, descrição, "
-            "cor e frequência desejada",
+    summary="Criar um novo hábito com nome, descrição, " "cor e frequência desejada",
     status_code=status.HTTP_201_CREATED,
     response_model=HabitOut,
 )

@@ -1,6 +1,8 @@
-from tortoise import Tortoise
-from fastapi import FastAPI
 from contextlib import asynccontextmanager
+
+from fastapi import FastAPI
+from tortoise import Tortoise
+
 from .settings import settings
 
 
